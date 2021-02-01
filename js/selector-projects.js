@@ -5,8 +5,12 @@ var gProjects = [
         title: 'Review camp sites across the world!',
         desc:
             'YelpCamp is my first official project I have made.  Specifically made to practice my basic fullstack development skills, Using Nodejs, Express, and Basic api handling I wanted to get a certain feel of the Web Development field. This site contains the full CRUD aspect of a site, and has been used with mongoDB. The app has been made to improve the convenience for camping lovers around the world, a place to find new amazing camp sites, and leave a review about them.',
-        url: [],
-        imgUrl: '',
+        url: [
+            'https://zguy-yelpcamp.herokuapp.com/',
+            'https://github.com/ZGuyZohar/yelpcamp',
+        ],
+        imgUrl: 'img/project-imgs/yelpcamp-preview.png',
+        category: 'Fullstack CRUD App',
         createdAt: '12/11/20',
     },
     {
@@ -16,7 +20,8 @@ var gProjects = [
         desc:
             "After I finished YelpCamp, I decided it's time to take a step back and improve my fundamentals. At first focusing with basic javascript I created TouchNums, A game that shows the improve in basic functioning in front end development and the use of 2D arrays.",
         url: [],
-        imgUrl: '',
+        imgUrl: 'img/project-imgs/touchnums-preview.png',
+        category: '2 Dimensional Arrays',
         createdAt: '12/01/21',
     },
     {
@@ -25,8 +30,12 @@ var gProjects = [
         title: 'Watch out for the mines!',
         desc:
             'After my first big project I wanted to improve my basic skills and become more proffesional. 2 months after diving deeper into Javascript I came up with this project. What better way to show my Javascript fundamentals than with a game that deals with 2Dimensional Arrays and loops around the whole board?, I cloned by scratch the windows XP Minesweeper game with some added features and styles appropriate for our time and age.',
-        url: [],
-        imgUrl: '',
+        url: [
+            'https://zguyzohar.github.io/minesweeper/',
+            'https://github.com/ZGuyZohar/minesweeper',
+        ],
+        imgUrl: 'img/project-imgs/minesweeper-preview.png',
+        category: '2 Dimensional Arrays',
         createdAt: '24/01/21',
     },
     {
@@ -36,11 +45,18 @@ var gProjects = [
         desc:
             'Now it was time to get better with basic CRUD functioning. This time without back end and with manipulation of the local storage instead. This step has felt for me mandatory to understanding the CRUD aspect even better than before.',
         url: [],
-        imgUrl: '',
+        imgUrl: 'img/project-imgs/todos-preview.png',
+        category: 'Front End CRUD App',
         createdAt: '27/01/21',
-    }
+    },
 ];
 
 function getProjects(){
     return gProjects;
+}
+
+function getProjectById(id){
+    return gProjects.find(function(project){
+        return project.id === id;
+    })
 }
