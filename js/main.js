@@ -64,3 +64,13 @@ function renderModal(id){
     `;
     elModal.innerHTML = strHtml
 }
+
+function submitMail(){
+    var elEmailVal = document.querySelector('#exampleInputEmail1').value;
+    var elSubjectVal = document.querySelector('#inputsubject').value;
+    var elTextVal = document.querySelector('#textarea-input').value;
+    return window.open(
+        `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${elEmailVal}&su=${elSubjectVal}&body=${elTextVal}`,
+        'GMAIL_SUBMIT'
+    );   
+}
