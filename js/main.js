@@ -7,7 +7,7 @@ function renderProjects() {
     var elPortfolio = document.querySelector('#portfolio-content');
     var strHtmls = projects.map(function (project) {
         return `
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="${project.id} portfolio-item">
                 <a class="portfolio-link" data-toggle="modal" onclick="renderModal('${project.id}')" href="#portfolioModal">
                     <div class="portfolio-hover">
                     <div class="portfolio-hover-content">
@@ -19,6 +19,7 @@ function renderProjects() {
                 <div class="portfolio-caption">
                     <h4>${project.name}</h4>
                     <p class="text-muted">${project.title}</p>
+                    <p class="custom-info">${project.desc}</p>
                 </div>
                 </div>
         `;
@@ -28,7 +29,6 @@ function renderProjects() {
 
 function renderModal(id){
     var project = getProjectById(id);
-    console.log(project);
     var elModal = document.querySelector('#portfolioModal');
     var strHtml = `
         <div class="modal-dialog">
